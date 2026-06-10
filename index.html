@@ -218,7 +218,9 @@
             Message
             <textarea name="message" rows="5" placeholder="Tell us about your travel plans" required></textarea>
           </label>
-          <button type="submit" class="btn btn-primary">Send Request</button>
+          input type="hidden" name="_subject" value="New SolTravel contact request">
+          <input type="hidden" name="_captcha" value="false"
+         <button type="submit" class="btn btn-primary">Send Request</button>
           <p class="form-message" id="form-message"></p>
         </form>
         <div class="contact-details">
