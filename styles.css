@@ -124,6 +124,37 @@ a {
   transition: background 0.25s ease;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 999px;
+}
+
+.language-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.45rem 0.6rem;
+  background: transparent;
+  color: rgba(255,255,255,0.78);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.language-button.is-active,
+.language-button:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
 .nav-button:hover {
   background: rgba(255,255,255,0.28);
 }
@@ -344,8 +375,7 @@ a {
 }
 
 .destination-card .btn {
-  align-self: flex-start;
-  margin-top: 0.5rem;
+  display: none;
 }
 
 .testimonial {
@@ -451,6 +481,11 @@ a {
     align-items: flex-start;
   }
 
+  .nav-actions {
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
   .nav-links {
     flex-wrap: wrap;
     gap: 1rem;
@@ -458,7 +493,7 @@ a {
   }
 
   .nav-button {
-    margin-top: 1rem;
+    margin-top: 0;
   }
 
   .hero {
@@ -468,4 +503,26 @@ a {
   .hero-content {
     padding-top: 2rem;
   }
+}
+
+html[dir="rtl"] body {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .section,
+html[dir="rtl"] .footer-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .package-card ul {
+  padding-left: 0;
+  padding-right: 1.2rem;
+}
+
+html[dir="rtl"] .nav-links,
+html[dir="rtl"] .nav-actions,
+html[dir="rtl"] .hero-actions,
+html[dir="rtl"] .footer-content {
+  direction: rtl;
 }
